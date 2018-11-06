@@ -1,0 +1,13 @@
+nav {
+  text-transform: uppercase;
+  background: linear-gradient(to right, #2c547c 0%, #8e3952 63%, #dc2430 100%);
+}
+
+.navbar-brand-container {
+  margin-right: 20px;
+}
+
+li {
+  margin-left: 20px;
+  margin-right: 20px;
+}
