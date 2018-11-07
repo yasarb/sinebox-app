@@ -17,7 +17,7 @@ import { CustomCarouselComponent } from './custom-carousel.component';
         CustomCarouselComponent
     ],
     providers: [
-        { provide: CarouselConfig, useValue: { interval: 1500, noPause: true, showIndicators: true } }
+        { provide: CarouselConfig, useValue: { interval: 3000, noPause: true, showIndicators: true } }
     ]
 })
 export class CustomCarouselModule { }

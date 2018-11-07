@@ -1,15 +1,34 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Observable } from 'rxjs';
+import { MovieService } from '../core/movie.service';
+import { IMovie } from '../shared/interfaces';
 
 @Component({
-  selector: 'app-custom-carousel',
-  templateUrl: './custom-carousel.component.html',
-  styleUrls: ['./custom-carousel.component.css']
+    selector: 'app-custom-carousel',
+    templateUrl: './custom-carousel.component.html',
+    styleUrls: ['./custom-carousel.component.css']
 })
+
 export class CustomCarouselComponent implements OnInit {
 
-  constructor() { }
+    private _items: IMovie[];
 
-  ngOnInit() {
-  }
+    constructor() {
+    }
+
+    @Input() get items(): IMovie[] {
+        return this._items;
+    }
+
+    set items(val: IMovie[]) {
+        this._items = val;
+        this.changed.emit(this.items);
+    }
+
+    @Output() changed: EventEmitter<IMovie[]> = new EventEmitter<IMovie[]>();
+
+    ngOnInit() {
+
+    }
 
 }

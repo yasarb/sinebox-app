@@ -5,12 +5,12 @@
 export const environment = {
     production: false,
     firebase: {
-        apiKey: '<your-key>',
-        authDomain: '<your-project-authdomain>',
-        databaseURL: '<your-database-URL>',
-        projectId: '<your-project-id>',
-        storageBucket: '<your-storage-bucket>',
-        messagingSenderId: '<your-messaging-sender-id>'
+        apiKey: 'AIzaSyDKvlSRQV8U4-ftqbKM-eIwJQYW9V2ItA0',
+        authDomain: 'sinebox-5a487.firebaseapp.com',
+        databaseURL: 'https://sinebox-5a487.firebaseio.com',
+        projectId: 'sinebox-5a487',
+        storageBucket: 'sinebox-5a487.appspot.com',
+        messagingSenderId: '154369489254'
     }
 };
 
