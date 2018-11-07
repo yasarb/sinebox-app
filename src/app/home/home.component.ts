@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieService } from '../core/movie.service';
-import { Observable } from '../../../node_modules/rxjs';
+import { Observable } from 'rxjs';
 
 @Component({
     selector: 'app-home',
@@ -10,10 +10,11 @@ import { Observable } from '../../../node_modules/rxjs';
 export class HomeComponent implements OnInit {
 
     private carouselItems: Observable<any[]>;
+    private movies: Observable<any[]>;
 
     constructor(movieService: MovieService) {
         this.carouselItems = movieService.getMostPopularMovies(3);
-        // console.log(this.carouselItems);
+        this.movies = movieService.getMoviesList();
     }
 
     ngOnInit() {

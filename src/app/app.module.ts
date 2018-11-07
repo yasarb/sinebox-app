@@ -12,9 +12,12 @@ import { BootstrapModule } from './bootstrap.module';
 import { AppRoutingModule } from './app-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CoreModule } from './core/core.module';
+import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './home/home.module';
 import { NowPlayingModule } from './nowplaying/nowplaying.module';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { MovieDetailModule } from './movie-detail/movie-detail.module';
+import { PageNotFoundModule } from './page-not-found/page-not-found.module';
 
 @NgModule({
     declarations: [
@@ -30,10 +33,13 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
         MaterialModule,
         BootstrapModule,
         CoreModule,
-        AppRoutingModule,
+        SharedModule,
         HomeModule,
         NowPlayingModule,
-        CarouselModule.forRoot()
+        CarouselModule.forRoot(),
+        MovieDetailModule,
+        AppRoutingModule,
+        PageNotFoundModule
     ],
     providers: [],
     bootstrap: [AppComponent]

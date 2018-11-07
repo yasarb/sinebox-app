@@ -34,4 +34,8 @@ export class MovieService {
         return movies;
     }
 
+    getMovieById(id: string) {
+        const movie = this.afs.collection(this.basePath, ref => ref.where('id', '==', parseInt(id, 10))).valueChanges();
+        return movie;
+    }
 }

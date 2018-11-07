@@ -1,0 +1,31 @@
+.movie-mat-card {
+  width: 200px;
+  height: 370px;
+  margin-bottom: 20px;
+  display: block;
+  background: #FFFFFF;
+  border-radius: 4px;
+  margin: 10px;
+  align: center;
+  transition: all .25s linear;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.4);
+}
+
+.movie-mat-card:hover {
+  box-shadow: -1px 10px 29px 0px rgba(0, 0, 0, 0.8);
+}
+
+mat-card-image {
+  object-fit: cover;
+}
+
+mat-card-content p {
+  font-weight: 600;
+}
+
+a {
+  color: #2C547C;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}

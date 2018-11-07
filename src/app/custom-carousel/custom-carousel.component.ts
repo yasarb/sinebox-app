@@ -1,6 +1,4 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Observable } from 'rxjs';
-import { MovieService } from '../core/movie.service';
 import { IMovie } from '../shared/interfaces';
 
 @Component({

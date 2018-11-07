@@ -1,0 +1,10 @@
+<mat-card class="movie-mat-card">
+  <a [routerLink]="['/movie', _movie.id]">
+    <img mat-card-image [src]="_movie.image_url" [alt]="_movie.title">
+    <mat-card-content>
+      <p>
+        {{ _movie.title }}
+      </p>
+    </mat-card-content>
+  </a>
+</mat-card>
