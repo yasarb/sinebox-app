@@ -1,3 +1,9 @@
+.carousel-caption {
+  background-color: #26a5c1dc;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 .carousel-image {
   display: block;
   width: 100%;
