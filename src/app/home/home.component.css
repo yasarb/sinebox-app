@@ -1,9 +1,42 @@
 .container {
   margin-right: auto;
   margin-left: auto;
-  padding: 10px;
+  padding: 56px 10px 10px 10px;
   height: 100%;
   width: 100%;
+  background-color: #f3f3f3;
+}
+
+.left-banner {
+  background: url('../../assets/images/home-side.jpg') top left no-repeat transparent;
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+.right-banner {
+  background: url('../../assets/images/home-side.jpg') top right no-repeat transparent;
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
 }
 
 .movie-grid {

@@ -6,4 +6,5 @@ export interface IMovie {
     imdb_rating: number;
     duration: number;
     release_date: any;
+    youtube_id: string;
 }
