@@ -10,7 +10,7 @@
 .left-banner {
   background: url('../../assets/images/home-side.jpg') top left no-repeat transparent;
   height: 100%;
-  width: 300px;
+  width: 290px;
   position: fixed;
   z-index: -1;
   top: 0;
@@ -29,7 +29,7 @@
 .right-banner {
   background: url('../../assets/images/home-side.jpg') top right no-repeat transparent;
   height: 100%;
-  width: 300px;
+  width: 290px;
   position: fixed;
   z-index: -1;
   top: 0;
