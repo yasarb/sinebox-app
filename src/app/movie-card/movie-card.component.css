@@ -13,8 +13,8 @@
   box-shadow: -1px 10px 29px 0px rgba(0, 0, 0, 0.8);
 }
 
-mat-card-image {
-  object-fit: cover;
+mat-card img {
+  border-radius: 4px 4px 0 0;
 }
 
 mat-card-content p {
