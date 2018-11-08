@@ -9,7 +9,7 @@ import { IMovie } from '../shared/interfaces';
 
 export class MovieCardComponent implements OnInit {
 
-    private _movie: IMovie;
+    _movie: IMovie;
 
     constructor() { }
 

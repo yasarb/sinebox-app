@@ -7,7 +7,7 @@ import { MovieService } from '../core/movie.service';
 import { IMovie } from '../shared/interfaces';
 
 export interface DialogData {
-    video_url: string;
+    video_id: string;
 }
 
 @Component({
@@ -17,8 +17,8 @@ export interface DialogData {
 })
 export class MovieDetailComponent implements OnInit {
 
-    private movie: IMovie;
-    private posterItems: IMovie[] = [];
+    movie: IMovie;
+    posterItems: IMovie[] = [];
 
     constructor(
         private route: ActivatedRoute,

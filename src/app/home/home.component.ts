@@ -9,8 +9,8 @@ import { Observable } from 'rxjs';
 })
 export class HomeComponent implements OnInit {
 
-    private carouselItems: Observable<any[]>;
-    private movies: Observable<any[]>;
+    carouselItems: Observable<any[]>;
+    movies: Observable<any[]>;
 
     constructor(movieService: MovieService) {
         this.carouselItems = movieService.getMostPopularMovies(3);
