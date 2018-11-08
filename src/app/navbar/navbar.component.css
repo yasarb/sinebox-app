@@ -7,3 +7,9 @@ li {
   margin-left: 20px;
   margin-right: 20px;
 }
+
+.btn-search {
+  background-color: transparent;
+  border: 1px solid white;
+  color: #fff;
+}

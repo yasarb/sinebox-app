@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
 
     constructor(movieService: MovieService) {
         this.carouselItems = movieService.getMostPopularMovies(3);
-        this.movies = movieService.getMoviesList();
+        this.movies = movieService.getMoviesList('id');
     }
 
     ngOnInit() {

@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -11,6 +12,7 @@ import { MaterialModule } from './material.module';
 import { BootstrapModule } from './bootstrap.module';
 import { AppRoutingModule } from './app-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
+import { SearchTypeAheadComponent } from './search-type-ahead/search-type-ahead.component';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './home/home.module';
@@ -22,11 +24,13 @@ import { PageNotFoundModule } from './page-not-found/page-not-found.module';
 @NgModule({
     declarations: [
         AppComponent,
-        NavbarComponent
+        NavbarComponent,
+        SearchTypeAheadComponent
     ],
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
+        FormsModule,
         AngularFireModule.initializeApp(environment.firebase),
         AngularFirestoreModule,
         AngularFireDatabaseModule,

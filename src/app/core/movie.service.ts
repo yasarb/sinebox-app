@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
+import { Observable, BehaviorSubject } from 'rxjs';
+import { switchMap, debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
 
-import { IMovie } from '../shared/interfaces';
 
 @Injectable()
 export class MovieService {
@@ -10,8 +10,8 @@ export class MovieService {
 
     constructor(private afs: AngularFirestore) { }
 
-    getMoviesList() {
-        const movies = this.afs.collection(this.basePath, ref => ref.orderBy('id')).valueChanges();
+    getMoviesList(order) {
+        const movies = this.afs.collection(this.basePath, ref => ref.orderBy(order)).valueChanges();
         return movies;
     }
 
@@ -38,4 +38,31 @@ export class MovieService {
         const movie = this.afs.collection(this.basePath, ref => ref.where('id', '==', parseInt(id, 10))).valueChanges();
         return movie;
     }
+
+    searchByTitle(start: BehaviorSubject<string>): Observable<any[]> {
+        return start.pipe(switchMap(startText => {
+            startText = startText.charAt(0).toUpperCase() + startText.slice(1);
+            const endText = startText + '\uf8ff';
+            const var1 = this.afs
+                .collection('/movies', ref =>
+                    ref
+                        .orderBy('title')
+                        .limit(3)
+                        .startAt(startText)
+                        .endAt(endText)
+                )
+                .snapshotChanges();
+            const var2 = var1
+                .pipe(debounceTime(100),
+                    distinctUntilChanged());
+            const var3 = var2.pipe(
+                map(changes => {
+                    return changes.map(c => {
+                        return { key: c.payload.doc.id, ...c.payload.doc.data() };
+                    });
+                }));
+            return var3;
+        }));
+    }
 }
+

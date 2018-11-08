@@ -1,0 +1,36 @@
+<div class="search-bar">
+
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="searchTerm"
+      (keyup)="search($event)" name="search">
+  </form>
+
+  <div class="suggestion-bar" *ngIf="searchTerm" [hidden]="!displayBar">
+    <div *ngIf="movies?.length >= 1" class="">
+      <div *ngFor="let movie of movies" class="search-result-item">
+        <a [routerLink]="['/movie', movie?.id]" (click)="hideSuggestionBar()">
+          <div class="row">
+            <div class="col-sm-3 search-result-item-poster">
+              <img [src]="movie?.image_url" />
+            </div>
+            <div class="col-sm-9 padding-0 search-result-item-text">
+              <div class="search-result-item-title">
+                <h5>{{ movie?.title }}</h5>
+              </div>
+              <div class="search-result-item-year">
+                <p>({{ movie?.release_date.toDate() | date:'yyyy' }})</p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div *ngIf="movies?.length < 1" class="suggestion-not-found">
+      <p>
+        No results found :(
+      </p>
+    </div>
+
+  </div>
+</div>
