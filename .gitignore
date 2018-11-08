@@ -62,3 +62,6 @@ typings/
 
 # visual studio code workspace
 sinebox-workspace.code-workspace
+
+# nodejs build dir
+dist
