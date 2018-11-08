@@ -7,6 +7,7 @@ import { YoutubePlayerModule } from 'ngx-youtube-player';
 import { MovieDetailRoutingModule } from './movie-detail-routing.module';
 import { MovieDetailComponent, VideoDialogComponent } from './movie-detail.component';
 import { CustomCarouselModule } from '../custom-carousel/custom-carousel.module';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
     declarations: [
@@ -19,7 +20,8 @@ import { CustomCarouselModule } from '../custom-carousel/custom-carousel.module'
         MatDialogModule,
         YoutubePlayerModule,
         MovieDetailRoutingModule,
-        CustomCarouselModule
+        CustomCarouselModule,
+        SharedModule
     ],
     exports: [
         MovieDetailComponent,
