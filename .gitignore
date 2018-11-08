@@ -62,6 +62,3 @@ typings/
 
 # visual studio code workspace
 sinebox-workspace.code-workspace
-
-src/environments/environment.prod.ts
-src/environments/environment.ts

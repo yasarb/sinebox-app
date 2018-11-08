@@ -7,5 +7,6 @@ export const environment = {
         projectId: 'sinebox-5a487',
         storageBucket: 'sinebox-5a487.appspot.com',
         messagingSenderId: '154369489254'
+
     }
 };
