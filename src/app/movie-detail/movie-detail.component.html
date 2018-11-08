@@ -1,8 +1,6 @@
 <div class="container-fluid">
   <div class="movie-details-header">
-    <div class="img-header" [ngStyle]="{ 'background-image': 'url(' + movie?.image_url + ')'}">
-
-    </div>
+    <div class="img-header" [ngStyle]="{ 'background-image': 'url(' + movie?.image_url + ')'}"></div>
     <div class="container">
       <div class="row">
 
@@ -14,16 +12,16 @@
           <div class="movie-title">
             <h1>{{ movie?.title }}</h1>
             <div class="movie-imdb-rating">
-              <i class="material-icons icon-star">star</i>
+              <i class="material-icons icon-18 icon-bold">star</i>
               {{ movie?.imdb_rating }}
             </div>
           </div>
           <div class="movie-credits">
             <p>
-              <strong>Director: </strong> {{ movie?.title }}
+              <strong>Director: </strong> {{ movie?.director }}
             </p>
             <p>
-              <strong>Cast: </strong> {{ movie?.title }}
+              <strong>Stars: </strong> {{ movie?.cast }}
             </p>
           </div>
           <div class="movie-buttons">
@@ -36,9 +34,27 @@
     </div>
   </div>
 
-  <!-- <section class="movie-details-text">
+  <div class="movie-details-text">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          <div>
+            <i class="material-icons icon-18 icon-bold">calendar_today</i>
+            {{ movie?.release_date.toDate() | date }}
+          </div>
+          <div>
+            <i class="material-icons icon-18 icon-bold">timer</i>
+            {{ movie?.duration | duration}}
+          </div>
+        </div>
 
-
-  </section> -->
+        <div class="col-sm-9">
+          <p>
+            {{ movie?.detail }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </div>

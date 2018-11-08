@@ -71,7 +71,7 @@ div.movie-details-header::after {
   color: #fff;
 }
 
-.icon-star {
+.icon-18 {
   font-size: 18px;
 }
 
@@ -102,4 +102,17 @@ div.movie-details-header::after {
   background-color: transparent;
   border: 1px solid white;
   color: #fff;
+}
+
+.movie-details-text {
+  font-size: 16px;
+  color: #000;
+  padding: 30px 0 60px 0;
+  line-height: 150%;
+  border-bottom: 5px solid #e6007e;
+  ;
+}
+
+.icon-bold {
+  font-weight: bold;
 }
